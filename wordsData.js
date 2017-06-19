@@ -4,8 +4,9 @@ const mongoose = require('mongoose'),
 
 
     wordSchema = new schema({
-    hebrew: {type:String, index:1},
-    english: String,
+    english: {type:String, index:1,required:true, unique:true},
+    hebrew: String,
+    idWord: Number,
     randomWords: [String],
 }, {collection: 'words'});
 
