@@ -1,20 +1,9 @@
 const words = require('./wordsData');
-var triviaWords=[];
 
-var consts   = require('./consts'),
-    mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 var point=0;
 
-mongoose.Promise = global.Promise;
-
-mongoose.connect(consts.MLAB_KEY);
-const conn   = mongoose.connection;
-
-conn.on('error',
-(err) => {
-console.log(`connection error: ${err}`);
-});
 
 mongoose.connection.on('open',
     () => console.log('Connected'));
