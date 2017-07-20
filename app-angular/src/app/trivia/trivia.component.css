@@ -1,0 +1,76 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+}
+main{
+    background-color: #0c0a3e;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+header{
+    background-color: #fabd35;
+    height: 100px;
+    color: #0c0a3e;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 70px;
+}
+section{
+  color:#fabd35;
+  font-size: 17px;
+  width: 180px;
+  float: right;
+  margin-top: 40px;
+  padding: 10px;
+}
+#nikud{
+   text-align: left;
+   font-weight: bold;
+}
+#que_num{
+   text-align: right;
+   float: left;
+   font-weight: bold;
+}
+section p{
+    border-top: #66b745 solid 7px;
+}
+div p{
+    font-size: 20px;
+    text-align: right;
+    background-color: #fabd35;
+    color: #0c0a3e;
+    padding: 12px;
+    font-weight: bold;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+#res{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+div{
+    margin: 40px;
+}
+#word{
+  color: #60d9e9;
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+button{
+    font-size:20px;
+    margin:100px;
+    padding: 10px;
+    background-color: #ec2079;  
+    border: 0;
+    color: white;
+    font-weight: bold;
+}

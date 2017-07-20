@@ -1,0 +1,21 @@
+<header>
+    <h1>אוצר מילים</h1>
+</header>
+<main>
+    <div>
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+            <select name="fromLanguage" formControlName="fromLanguage">
+                <option value="en"> English </option>
+                <option value="iw"> עיברית </option>
+            </select>
+            <select name="toLanguage" formControlName="toLanguage">
+                <option value="iw"> עיברית </option>
+                <option value="en"> English </option>
+            </select><br>
+            <label>:בחר מילה לתרגום</label>
+            <input type="text" formControlName="inputWord"><br>
+            <input type="submit" value="תרגם">
+            <p>{{translateWord}}</p>
+        </form>
+    </div>
+</main>
