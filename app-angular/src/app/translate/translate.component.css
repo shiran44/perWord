@@ -3,12 +3,12 @@
     padding: 0px;
     font-family: 'Arial';
     display: block;
+    height: 100%;
+
 }
 main{
     background-color: #0c0a3e;
-}
-p{
-    font-size: 30px;
+    padding: 20px;
 }
 select{
     display: inline;
@@ -29,6 +29,12 @@ div{
     width: 900px;
     padding: 80px;
 }
+
+.glyphicon glyphicon-arrow-right{
+    color:white;
+    font-size:17;
+}
+
 header{
     background-color: #fabd35;
     height: 100px;
@@ -40,9 +46,24 @@ h1{
     font-weight: bold;
     font-size: 70px;
 }
-input,label{
-    margin:10px;
-    display: inline;
+input{
+    margin: auto;
     color: black;
     font-size:30px;
+}
+label,p{
+        margin-top:50px;
+        margin-bottom:20px;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+}
+span{
+    font-size:500px;
+}
+a{
+    font-size: 30px;
+    text-align: right;
+    color: #ec2079;
+    font-weight: bold;
 }

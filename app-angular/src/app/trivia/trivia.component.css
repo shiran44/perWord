@@ -3,6 +3,7 @@
     padding: 0px;
     font-family: 'Open Sans', sans-serif;
     display: block;
+    height: 100%;
 }
 main{
     background-color: #0c0a3e;
@@ -51,10 +52,13 @@ div p{
     margin: auto;
     margin-bottom: 10px;
 }
-#res{
+#res, #hint{
     text-align: center;
     font-size: 50px;
     font-weight: bold;
+}
+#hint{
+      font-size: 30px;
 }
 div{
     margin: 40px;
@@ -67,10 +71,17 @@ div{
 }
 button{
     font-size:20px;
-    margin:100px;
+    margin:30px;
     padding: 10px;
     background-color: #ec2079;  
     border: 0;
     color: white;
     font-weight: bold;
+    float: left;
+    width: 200px;
 }
+.clear{
+  clear: both;
+}
+
+

@@ -16,6 +16,10 @@
         <p (click)="check(word ,options[2])"> {{options[2]}} </p> <br>
         <p (click)="check(word ,options[3])"> {{options[3]}} </p> <br>
     </div>
+    <p id="hint"></p>
     <p id="res"></p>
-    <button (click)="nextQeu()"> לשאלה הבאה </button>
+        <button (click)="nextQeu()"> לשאלה הבאה </button>
+        <button (click)="getHint(word,options)"> רמז </button>
+        <button id = "addWord" (click)="addWord()"> הוספת מילה </button>
+        <div class="clear"></div>
 </main>

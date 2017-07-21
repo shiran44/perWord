@@ -16,6 +16,9 @@ export class TriviaComponent implements OnInit {
   point=0;
   count=0;
   answer;
+  flag='true';
+  checkOption;
+
   constructor( private newService : MyServiceService ) {}
 
 
@@ -31,8 +34,10 @@ export class TriviaComponent implements OnInit {
 
   }
    check(word,select){
-       this.newService.checkAnswer(this.word,select, (result) => {
+     if (this.flag=='true'){
+           this.newService.checkAnswer(this.word,select, (result) => {
            this.resultFun=result;
+           this.flag='false';
            if ( this.resultFun=='true' ){
                this.point += 1;
                document.getElementById('res').innerHTML="!תשובה נכונה";
@@ -42,10 +47,25 @@ export class TriviaComponent implements OnInit {
                 document.getElementById('res').innerHTML="!תשובה שגויה";
                 document.getElementById('res').style.color="red";
             }
-       })
-       }
+          })
+     };
+  }
+
+  getHint(word1,options){
+    for (let i=0; i< this.options.length; i++){
+        this.newService.checkAnswer(word1,options[i], (result) => {
+          this.checkOption=result;
+          if ( this.checkOption=='false' ){
+              document.getElementById('hint').innerHTML="רמז: התשובה היא לא "+options[i];
+              document.getElementById('hint').style.color="red";
+            }
+        })
+    }
+  }
        nextQeu(){
+           this.flag='true';
            document.getElementById('res').innerHTML="";
+           document.getElementById('hint').innerHTML="";
            this.ngOnInit();
        }
 
