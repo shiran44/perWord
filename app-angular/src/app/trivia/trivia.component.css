@@ -83,5 +83,12 @@ button{
 .clear{
   clear: both;
 }
+#back{
+  float: right;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
 
 

@@ -7,8 +7,8 @@
 
 }
 main{
-    background-color: #0c0a3e;
     padding: 20px;
+    background-color: #0c0a3e;
 }
 select{
     display: inline;
@@ -24,7 +24,7 @@ select{
 option{
     font-weight: bold;
 }
-div{
+#mainDiv{
     margin:auto;
     width: 900px;
     padding: 80px;
@@ -66,4 +66,18 @@ a{
     text-align: right;
     color: #ec2079;
     font-weight: bold;
+}
+button{
+    font-size:20px;
+    margin:30px;
+    padding: 10px;
+    background-color: #ec2079;  
+    border: 0;
+    color: white;
+    font-weight: bold;
+    float: right;
+    width: 200px;
+}
+.clear{
+    clear: both;
 }

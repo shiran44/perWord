@@ -3,10 +3,12 @@
     padding: 0px;
     font-family: Arial;
     display: block;
+    background-color: #0c0a3e;
 }
 #wrapper{
-    background-color: #0c0a3e;
-    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 section{
     margin: auto;

@@ -1,19 +1,17 @@
 <header>
-    <h1>אוצר מילים</h1>
+    <h1>הוספת מילה</h1>
 </header>
 <main>
     <div>
         <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
-
+            <label>הכנס מס מזהה:</label>
+            <input type="text" formControlName="inputWordId"><br>
 
             <label>הכנס מילה באנגלית:</label>
             <input type="text" formControlName="inputEnglishWord"><br>
 
             <label>הכנס תרגום לעברית (שים לב כי מדובר בתרגום הנכון, אחרת לא תתאפשר ההוספה)</label>
             <input type="text" formControlName="inputHebrewhWord"><br>
-
-            <label>הכנס מס מזהה:</label>
-            <input type="text" formControlName="inputWordId"><br>
 
             <label>אופציה 1 לתרגום:</label>
             <input type="text" formControlName="inputWord1"><br>
@@ -27,10 +25,11 @@
             <label>אופציה 4 לתרגום:</label>
             <input type="text" formControlName="inputWord4"><br>
 
-
-            <input type="submit" value="הוסף מילה">
-
+            <input type="submit" value="הוסף מילה" id="add">
             <p> {{saveData}}</p>
         </form>
     </div>
+    <button (click)="goBack()"> חזור למשחק </button>
+    <div class="clear"></div>
+
 </main>

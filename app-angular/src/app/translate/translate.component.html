@@ -2,7 +2,7 @@
     <h1>אוצר מילים</h1>
 </header>
     <main>
-        <div>
+        <div id="mainDiv">
             <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
                 <select name="fromLanguage" formControlName="fromLanguage">
                     <option value="iw"> עיברית </option>
@@ -17,7 +17,7 @@
                 <input type="submit" value="תרגם">
                 <p>{{translateWord}}</p>
             </form>
-            <div class="glyphicon glyphicon-arrow-right"></div>  
         </div>
-        <a routerLink= "select">חזור לבחירת משחק</a>
+        <button id="back"(click)="goBack()"> חזור לבחירת משחק </button>
+        <div class="clear"></div>
     </main>

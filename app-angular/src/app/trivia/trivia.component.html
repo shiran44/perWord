@@ -20,6 +20,7 @@
     <p id="res"></p>
         <button (click)="nextQeu()"> לשאלה הבאה </button>
         <button (click)="getHint(word,options)"> רמז </button>
-        <button id = "addWord" (click)="addWord()"> הוספת מילה </button>
+        <button><a routerLink= "add-word"> הוספת מילה </a> </button>
+        <button id="back"(click)="goBack()"> חזור לבחירת משחק </button>
         <div class="clear"></div>
 </main>

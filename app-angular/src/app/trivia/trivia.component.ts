@@ -68,5 +68,8 @@ export class TriviaComponent implements OnInit {
            document.getElementById('hint').innerHTML="";
            this.ngOnInit();
        }
+       goBack(){
+         window.history.back();
+       }
 
 }

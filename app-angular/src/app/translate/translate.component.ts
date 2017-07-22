@@ -25,7 +25,9 @@ export class TranslateComponent implements OnInit {
       })
 
       console.log(frm.fromLanguage);
-
   }
+       goBack(){
+         window.history.back();
+       }
 
 }

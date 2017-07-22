@@ -31,9 +31,9 @@ export class AddWordComponent implements OnInit {
         frm.inputWord2, frm.inputWord3, frm.inputWord4, (res)=> {
     this.saveData=res;
     })
-
-
   }
-
+  goBack(){
+         window.history.back();
+  }
 
 }
