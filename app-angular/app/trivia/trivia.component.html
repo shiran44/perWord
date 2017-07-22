@@ -1,0 +1,26 @@
+<header>
+    <h1>אוצר מילים</h1>
+</header>
+<main onload="getTrivia">
+    <section id=nikud> נקודות  
+        <p>{{point}}</p>
+    </section> <br> 
+    <section id=que_num> מספר שאלה 
+        <p>{{count}}</p>
+    </section>
+
+    <div>
+        <article id="word">{{word}}</article> <br>
+        <p (click)="check(word ,options[0])"> {{options[0]}} </p> <br>
+        <p (click)="check(word ,options[1])"> {{options[1]}} </p> <br>
+        <p (click)="check(word ,options[2])"> {{options[2]}} </p> <br>
+        <p (click)="check(word ,options[3])"> {{options[3]}} </p> <br>
+    </div>
+    <p id="hint"></p>
+    <p id="res"></p>
+        <button (click)="nextQeu()"> לשאלה הבאה </button>
+        <button (click)="getHint(word,options)"> רמז </button>
+        <button><a routerLink= "add-word"> הוספת מילה </a> </button>
+        <button id="back"(click)="goBack()"> חזור לבחירת משחק </button>
+        <div class="clear"></div>
+</main>

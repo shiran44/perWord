@@ -1,0 +1,23 @@
+<header>
+    <h1>אוצר מילים</h1>
+</header>
+    <main>
+        <div id="mainDiv">
+            <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+                <select name="fromLanguage" formControlName="fromLanguage">
+                    <option value="iw"> עיברית </option>
+                    <option value="en"> English </option>
+                </select>
+                <select name="toLanguage" formControlName="toLanguage">
+                    <option value="iw"> עיברית </option>
+                    <option value="en"> English </option>
+                </select><br>
+                <label>:בחר מילה לתרגום</label>
+                <input type="text" formControlName="inputWord"><br>
+                <input type="submit" value="תרגם">
+                <p>{{translateWord}}</p>
+            </form>
+        </div>
+        <button id="back"(click)="goBack()"> חזור לבחירת משחק </button>
+        <div class="clear"></div>
+    </main>
