@@ -4,7 +4,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-
 import { MyServiceService } from './my-service.service';
 import { SelectComponent } from './select/select.component';
 import { IndexComponent } from './index/index.component';
@@ -12,6 +11,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { VocabularyComponent } from './vocabulary/vocabulary.component';
 import { TranslateComponent } from './translate/translate.component';
 import { TriviaComponent } from './trivia/trivia.component';
+import { AddWordComponent } from './add-word/add-word.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { TriviaComponent } from './trivia/trivia.component';
     WelcomeComponent,
     VocabularyComponent,
     TranslateComponent,
-    TriviaComponent
+    TriviaComponent,
+    AddWordComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,8 @@ import { TriviaComponent } from './trivia/trivia.component';
     { path: 'welcome/vocabulary/select', component: SelectComponent } ,
     { path: 'welcome/vocabulary/select/translate', component: TranslateComponent } , 
     { path: 'welcome/vocabulary/select/trivia', component: TriviaComponent },
-    { path: 'welcome/vocabulary/select/translate/select', component: SelectComponent } 
+    { path: 'welcome/vocabulary/select/trivia/add-word', component: AddWordComponent } 
+
 
         ])
   ],
