@@ -12,6 +12,7 @@ import { VocabularyComponent } from './vocabulary/vocabulary.component';
 import { TranslateComponent } from './translate/translate.component';
 import { TriviaComponent } from './trivia/trivia.component';
 import { AddWordComponent } from './add-word/add-word.component';
+import { WriteWordComponent } from './write-word/write-word.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddWordComponent } from './add-word/add-word.component';
     VocabularyComponent,
     TranslateComponent,
     TriviaComponent,
-    AddWordComponent
+    AddWordComponent,
+    WriteWordComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { AddWordComponent } from './add-word/add-word.component';
     { path: 'welcome/vocabulary/select', component: SelectComponent } ,
     { path: 'welcome/vocabulary/select/translate', component: TranslateComponent } , 
     { path: 'welcome/vocabulary/select/trivia', component: TriviaComponent },
-    { path: 'welcome/vocabulary/select/trivia/add-word', component: AddWordComponent } 
+    { path: 'welcome/vocabulary/select/trivia/add-word', component: AddWordComponent },
+    { path: 'welcome/vocabulary/select/write-word', component: WriteWordComponent } 
 
 
         ])
