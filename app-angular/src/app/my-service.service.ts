@@ -62,6 +62,26 @@ export class MyServiceService {
       );
     }
 
+    insertWordData(data: string, data1: string, id: number, wordOp1: string ,wordOp2: string, wordOp3: string,wordOp4: string, callback: Function){
+        let english=data;
+        let hebrew=data1;
+        let idWord=id;
+        let word1= wordOp1,
+            word2= wordOp2,
+            word3= wordOp3,
+            word4=wordOp4;
+        this.http.get('https://perwordproject.herokuapp.com/insertNewWord/'+ english+'/'+hebrew+'/'+idWord+'/'+word1+'/'+word2+'/'+word3+'/'+word4)
+          .subscribe(
+            (response: Response) =>  {
+              console.log(response.json());
+              callback(response.json());
+            },
+            (error => {
+              console.log(error);
+              callback(null);
+            })
+      );
+    }
 
 
 
