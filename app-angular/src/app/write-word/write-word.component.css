@@ -6,9 +6,9 @@
     height: 100%;
 }
 main{
-    background-color: #0c0a3e;
     padding-top:10px;
     padding-bottom: 10px;
+    background-color: #0c0a3e;
 }
 header{
     background-color: #fabd35;
@@ -61,13 +61,25 @@ div p{
       font-size: 30px;
 }
 div{
-    margin: 40px;
+    width: 150px;
+    height: 150px;
+    float: right;
+    margin:10px;
+    background-color:#60d9e9;
+;
+}
+#mainDiv{
+  width: 800px;
+  height: 600px;
+  margin:auto;
+  top:250px;
 }
 #word{
   color: #60d9e9;
   font-size: 45px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
+  margin-top:50px;
 }
 button{
     font-size:20px;
@@ -89,14 +101,4 @@ button{
 a{
   color: white;
   text-decoration: none;
-}
-
-#selectLetter div{
-    height:40px;
-    width: 40px;
-
-    margin-right: 7px;
-    display: inline;
-    background-color: #60d9e9; 
-
 }
