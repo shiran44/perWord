@@ -29,6 +29,7 @@ export class MyServiceService {
         })
       );
     }
+
     checkAnswer(data: string,data1: string, callback: Function){
         let wordId=data;
         let wordSelect=data1;
@@ -81,6 +82,22 @@ export class MyServiceService {
               callback(null);
             })
       );
+    }
+
+    getTranslateData(data: string,callback: Function){
+      let wordId=data;
+      this.http.get('https://perwordproject.herokuapp.com/getWordTranslate/'+ wordId)
+          .subscribe(
+            (response: Response) =>  {
+              console.log(response.json());
+              callback(response.json());
+            },
+            (error => {
+              console.log(error);
+              callback(null);
+            })
+      );
+
     }
 
 

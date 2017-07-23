@@ -8,19 +8,18 @@
     <section id=que_num> מספר שאלה 
         <p>{{count}}</p>
     </section>
-    <article id="word">{{word}}</article> <br>
+    <article id="word">{{transWord}}</article> <br>
     <nav id="mainDiv">
         <div></div><div></div><div></div><div></div>
         <div></div><div></div><div></div><div></div>
         <div></div><div></div><div></div><div></div>
         <div></div><div></div><div></div><div></div>
     </nav>
-    <p id="hint"></p>
-    <p id="res"></p>
+    <div class="clear"></div>
     <button (click)="nextQeu()"> לשאלה הבאה </button>
-    <button (click)="getHint(word,options)"> רמז </button>
     <button id="back"(click)="goBack()"> חזור לבחירת משחק </button>
         <div class="clear"></div>
+
 
 </main>
 

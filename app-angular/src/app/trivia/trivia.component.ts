@@ -31,16 +31,17 @@ export class TriviaComponent implements OnInit {
          this.count++;
      })
      })
+
   }
    check(word,select){
      if (this.flag=='true'){
            this.newService.checkAnswer(this.word,select, (result) => {
            this.resultFun=result;
+           this.flag='false';
            if ( this.resultFun=='true' ){
                this.point += 1;
                document.getElementById('res').innerHTML="!תשובה נכונה";
                document.getElementById('res').style.color="#66b745";
-               this.flag='false';
             }
             else{
                 document.getElementById('res').innerHTML="!תשובה שגויה";

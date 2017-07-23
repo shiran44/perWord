@@ -60,13 +60,15 @@ div p{
 #hint{
       font-size: 30px;
 }
-div{
+#mainDiv>div{
     width: 150px;
     height: 150px;
     float: right;
     margin:10px;
     background-color:#60d9e9;
-;
+    color: black;
+    font-size: 35px;
+    text-align: center;
 }
 #mainDiv{
   width: 800px;
