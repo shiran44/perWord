@@ -4,13 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "shiranElinor",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.3",
-    "mongoose": "^4.10.6"
+    "google-translate-api": "^2.3.0",
+    "http": "0.0.0",
+    "json-parser": "^1.1.5",
+    "mongodb": "^2.2.30",
+    "mongoose": "^4.10.6",
+    "request": "^2.81.0"
   }
 }

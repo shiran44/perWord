@@ -5,16 +5,16 @@ mongoose.Promise = global.Promise;
 //The server option auto_reconnect is defaulted to true
 
 var options = {
-server: {
-auto_reconnect:true,
-}
+    server: {
+        auto_reconnect:true,
+    }
 };
-mongoose.connect(consts.MLAB_KEY, options);
 
+mongoose.connect(consts.MLAB_KEY, options);
 const conn = mongoose.connection;//get default connection
 // Event handlers for Mongoose
 conn.on('error', function (err) {
-console.log('Mongoose: Error: ' + err);
+    console.log('Mongoose: Error: ' + err);
 });
 
 conn.on('open', function() {

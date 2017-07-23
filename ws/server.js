@@ -1,6 +1,7 @@
 const   express    = require('express'),
         app        = express(),
         wordsList  = require('./wordsController'),
+        request    = require('request'),
         port       = process.env.PORT || 3000;
 
 app.set('port',port);
@@ -10,9 +11,9 @@ app.use(
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers",
             "Origin, X-Requested-With, Content-Type, Accept");
-        res.set("Content-Type", "application/json");
         next();
     });
+
 
 app.get('/', (req, res) => {
    res.sendFile(`${__dirname}/index.html`);
@@ -22,42 +23,32 @@ app.get('/includes/style.css', (req, res) => {
    res.sendFile(`${__dirname}/includes/style.css`);
 }); 
 
-app.get('/includes/controller.js', (req, res) => {
-   res.sendFile(`${__dirname}/includes/controller.js`);
+app.get('/images/words.png', (req, res) => {
+   res.sendFile(`${__dirname}/images/words.png`);
 }); 
 
-app.get('/images/perWordTit.png', (req, res) => {
-   res.sendFile(`${__dirname}/images/perWordTit.png`);
-});
-
-app.get('/images/welcomeTit.png', (req, res) => {
-   res.sendFile(`${__dirname}/images/welcomeTit.png`);
-});
-
-app.get('/images/goodLuck.png', (req, res) => {
-   res.sendFile(`${__dirname}/images/goodLuck.png`);
+app.get('/images/perWord.png', (req, res) => {
+   res.sendFile(`${__dirname}/images/perWord.png`);
 }); 
-
-app.get('/trivia.html', (req, res) => {
-   res.sendFile(`${__dirname}/trivia.html`);
- });
-app.get('/translate.html', (req, res) => {
-   res.sendFile(`${__dirname}/translate.html`);
- });
-app.get('/selectGame.html', (req, res) => {
-   res.sendFile(`${__dirname}/selectGame.html`);
- });
-
-app.get('/getWordTranslate/:wordId', wordsList.wordHebrew);
 
 app.get('/getAllData',
    (req,res)=>{
       wordsList.allwords().then(docs => res.json(docs));
 });
 
-app.get('/getPlay/:wordId', wordsList.playPoint);
+app.get('/getTranslate/:from/:to/:text', wordsList.getGoogleTranslate);
+
+app.get('/insertNewWord/:english/:hebrew/:idWord/:word1/:word2/:word3/:word4', wordsList.insertWordDataBase);
+
+app.get('/getWordTranslate/:wordId', wordsList.wordHebrew);
+
+app.get('/getAllEnglishWords', wordsList.allEngWords);
 
 app.get('/getWordTrivia/:wordId', wordsList.trivia);
+
+app.get('/getPlay/:wordId/:wordSelect', wordsList.playPoint);
+
+app.get('/writingLetter/:wordId/:letter', wordsList.checkLetter);
 
 
 app.listen(port,

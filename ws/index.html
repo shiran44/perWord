@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PER WORDS server</title>
+        <link rel="stylesheet" type="text/css" href="includes/style.css">
+    </head>
+    <body>
+        <div id="container">
+            <img src="/images/perWord.png"/> 
+            <h1>the server side</h1>
+
+            <h3>Get all words:</h3>
+            <p><a href="https://perwordproject.herokuapp.com/getAllData">click for /getAllData</a></p><br>
+
+            <h3>Get word translate from data base, insert english word:</h3>
+            <p><a href="https://perwordproject.herokuapp.com/getWordTranslate">click for /getWordTranslate/wordId</a></p><br>
+
+            <h3>Get all the english words from data base:</h3>
+            <p><a href="https://perwordproject.herokuapp.com/getAllEnglishWords">click for /getAllEnglishWords</a></p><br>            
+
+            <h3>get words trivia, insert english word:</h3>
+            <p><a href="https://perwordproject.herokuapp.com/getWordTrivia/">click for /getWordTrivia/wordId</a></p><br>
+
+            <h3>get result, after select option (Trivia game):</h3>
+            <p><a href="https://perwordproject.herokuapp.com/getPlay/">click for /getPlay/wordId/wordSelect</a></p><br>
+
+            <h3>get translate, from API Googe Translate, select from language, to language and your text:</h3>
+            <p><a href="https://perwordproject.herokuapp.com/getTranslate/">click for /getTranslate/from/to/text</a></p><br>
+
+            <h3>insert word to data base, word in english, hebrew - the translate, id word, option 1 translate, option 2 translate, option 3 translate,option 4 translate:</h3>
+            <p><a href="https://perwordproject.herokuapp.com/insertNewWord/">click for insertNewWord/english/hebrew/idWord/word1/word2/word3/word4</a></p><br>
+            
+            <h3>write letter and check  if it is in the translated word :</h3>
+            <p><a href="https://perwordproject.herokuapp.com/writingLetter/">click for writingLetter/wordId/letter</a></p><br>
+
+
+        </div> 
+    </body>
+</html>
